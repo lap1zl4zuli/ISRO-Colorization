@@ -79,8 +79,8 @@ if image is not None:
             logging.info("Image colorized successfully.")
             
             gray_col, color_col = st.columns(2)
-            gray_col.image(image, caption="Grayscale Image", use_column_width=True)
-            color_col.image(predicted_rgb, caption="Colorized Image", use_column_width=True)
+            gray_col.image(image, caption="Grayscale Image", use_container_width=True)
+            color_col.image(predicted_rgb, caption="Colorized Image", use_container_width=True)
             with open("output.png", "rb") as file:
                 st.download_button(label="Download Colorized Image", data=file, file_name=f'{image_name.split(".")[0]}_colorized.png', mime="image/png", use_container_width=True)
 
